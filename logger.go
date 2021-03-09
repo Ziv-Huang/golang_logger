@@ -17,7 +17,7 @@ import (
 var logger = logrus.New()
 
 const (
-	_path            = "../LOG/sdm.log"
+	_path            = "../LOG/record.log"
 	_infoPath        = "info.log"
 	_errorPath       = "error.log"
 	_rotationHour    = 24
