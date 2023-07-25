@@ -36,7 +36,7 @@ func (s *customFormatter) Format(entry *logrus.Entry) ([]byte, error) {
 	case logrus.InfoLevel:
 		levelColor = 32 // green
 	case logrus.WarnLevel:
-		levelColor = 33 // yellow
+		levelColor = 93 // yellow
 	case logrus.ErrorLevel:
 		levelColor = 31 // red
 	case logrus.FatalLevel:
@@ -116,6 +116,12 @@ func init() {
 	// 	},
 	// ))
 
+}
+
+// Set level
+func SetLevel(level int) {
+	// DEBUG: 5, INFO: 4, WARNING: 3, ERROR: 2, FATAL: 1
+	logger.SetLevel(logrus.Level(level))
 }
 
 // Debug : log.Debug
